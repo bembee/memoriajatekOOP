@@ -1,7 +1,7 @@
 const meret = 4; //ennyi kártyával dolgozuk
 
 const kartyaTomb = []; //itt tárolom a kártya objektumokat
-const kepekTomb = []; //itt tárolom a képek elérési útját
+let kepekTomb = []; //itt tárolom a képek elérési útját
 
 $(function () {
     new Jatek();
@@ -21,9 +21,9 @@ class Jatek {
                 return;
             }
             let kivalasztottKartya = "";
-            console.log(event.detail); //ezért kellett visszaadni az objektumot
+            // console.log(event.detail); //ezért kellett visszaadni az objektumot
             kivalsztottKartyak.push(event.detail);
-            console.log(kivalsztottKartyak);
+            // console.log(kivalsztottKartyak);
             //ha már van két kártya a kiválasztottKártyák között
             if (kivalsztottKartyak.length >= 2) {
                 //Blokkolom az összes kártyát, azaz nem lesznek kattinthatóak
